@@ -18,7 +18,8 @@
         <div class="container-fluid pt-3 w-100 d-flex align-items-center justify-content-between px-5">
             <a class="navbar-brand" href="#">Pikavestimenta</a>
             <!-- Button trigger modal -->
-            <button type="button" class="login-btn rounded-pill px-3 ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="login-btn rounded-pill px-3 ms-auto" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 <ion-icon name="contact"></ion-icon> Iniciar sesión
             </button>
         </div>
@@ -365,7 +366,16 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque at modi necessitatibus,
+                            perspiciatis, in reiciendis recusandae maxime nam cupiditate praesentium fuga quia eligendi
+                            officiis voluptate eos rem autem? Atque deleniti consectetur aperiam accusantium est quam
+                            quo nesciunt amet at! Possimus ex rem, ea nihil repellat, eligendi eius similique
+                            repudiandae fugiat amet architecto reiciendis temporibus fuga a laudantium fugit
+                            necessitatibus tenetur eos? Impedit dignissimos eum excepturi ipsum amet reiciendis beatae.
+                            Molestiae libero officiis doloribus porro quam animi aliquam adipisci nostrum, voluptate
+                            delectus architecto nulla minima ab corporis hic exercitationem nihil quis iusto deleniti
+                            ipsum alias nemo accusamus? Atque quo architecto illo.
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -392,11 +402,21 @@
                         $(this).addClass('active');
                     });
                     const sections = document.querySelectorAll('section');
-                    const options = {
-                        root: null,
-                        rootMargin: '-150px',
-                        threshold: .3
-                    };
+                    let options = {};
+                    if (window.innerHeight <= 768) {
+                        options = {
+                            root: null,
+                            rootMargin: '-150px',
+                            threshold: 0
+                        };
+                    } else {
+                        options = {
+                            root: null,
+                            rootMargin: '-150px',
+                            threshold: .3
+                        };
+                    }
+
                     const observer = new IntersectionObserver((entries) => {
                         entries.forEach(entry => {
 
