@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="fixed-top shadow-sm py-0">
+    <header class="fixed-top shadow-sm py-0" >
         <div class="container-fluid pt-3 w-100 d-flex align-items-center justify-content-between px-5">
             <a class="navbar-brand" href="#">Pikavestimenta</a>
             <span class="login-btn rounded-pill px-3 ms-auto"><ion-icon name="contact"></ion-icon> Iniciar sesión</span>
@@ -33,7 +33,7 @@
     <section id="inicio" class="hero">
         <h2>Moda inspirada en Pokémon</h2>
         <p>Descubre nuestra colección exclusiva de ropa y accesorios para entrenadores de todas las edades</p>
-        <button class="hero-btn">Ver colección</button>
+        <a class="hero-btn d-inline-block" href="#categorias"">Ver colección</a>
     </section>
       <section class="welcome-animation">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokébola 1"
@@ -65,7 +65,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -199,7 +199,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -219,7 +219,7 @@
                         📱 Compartir
                     </button>
                     <button class="btn" onclick="toggleFavorite(this)">
-                        ⭐ Favorito
+                        ⭐ Añadir a favoritos
                     </button>
                 </div>
             </div>
@@ -373,6 +373,15 @@
 
                 // Aquí podrías agregar lógica para almacenar el producto en un carrito real
                 console.log(`Producto añadido: ${productName}, Precio: $${price}`);
+            }
+            // Función para marcar y desmarcar favoritos
+            function toggleFavorite(button) {
+                $(button).toggleClass('active-favorite');
+                if ($(button).hasClass('active-favorite')) {
+                    $(button).text('⭐ Favorito');
+                } else {
+                    $(button).text('⭐ Añadir a favoritos');
+                }
             }
         </script>
 </body>
