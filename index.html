@@ -68,10 +68,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Buzo Pikachu', 29.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Buzo Pikachu')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -88,10 +88,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Camiseta Charizard', 24.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Camiseta Charizard')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -109,10 +109,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Gorra Jigglypuff', 19.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Gorra Jigglypuff')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -129,10 +129,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Pijama Snorlax', 39.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Pijama Snorlax')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -162,10 +162,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Camiseta Squirtle', 22.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Camiseta Squirtle')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -182,10 +182,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Mochila Eevee', 34.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Mochila Eevee')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -205,10 +205,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Sudadera Bulbasaur', 27.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Sudadera Bulbasaur')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -225,10 +225,10 @@
                             <div class="buttons">
                                 <button class="btn btn-cart"
                                     onclick="addToCart('Paraguas Psyduck', 18.99, 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png')">
-                                    🛒 Añadir
+                                    <ion-icon name="cart"></ion-icon> Añadir
                                 </button>
                                 <button class="btn" onclick="shareProduct('Paraguas Psyduck')">
-                                    📱 Compartir
+                                    📨 Compartir
                                 </button>
                                 <button class="btn" onclick="toggleFavorite(this)">
                                     ⭐ Añadir a favoritos
@@ -384,84 +384,89 @@
 
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <div id="login" class="container tab-pane show active"><br>
-                                        <div class="mb-3">
-                                            <label for="correo" class="form-label">Correo</label>
-                                            <input type="email" class="form-control" id="correo"
-                                                placeholder="Su correo electrónico">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Su contraseña">
-                                        </div>
-                                        <div class="d-flex justify-content-between align-content-center">
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="rememberMe">
-                                                <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                    <form action="#">
+                                        <div id="login" class="container tab-pane show active"><br>
+                                            <div class="mb-3">
+                                                <label for="correo-login" class="form-label">Correo</label>
+                                                <input type="email" class="form-control" id="correo-login"
+                                                    placeholder="Su correo electrónico">
                                             </div>
-                                            <div class="mb-3 form-check">
-                                                <a href="#" class="no-password">¿Olvidó su contraseña?</a>
+                                            <div class="mb-3">
+                                                <label for="password-login" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="password-login"
+                                                    placeholder="Su contraseña">
                                             </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <button type="submit"
-                                                class="btn login-btn w-100 d-inline-block text-center">Iniciar
-                                                sesión</button>
-                                        </div>
-                                        <div class="separator">
-                                            <span class="text-muted small">O inicia sesión con</span>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-content-center">
-                                            <div class="mb-3 form-check">
-                                                <button type="button" class="btn "><ion-icon
-                                                        name="logo-google"></ion-icon> Google</button>
+                                            <div class="d-flex justify-content-between align-content-center">
+                                                <div class="mb-3 form-check">
+                                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                    <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                    <a href="#" class="no-password">¿Olvidó su contraseña?</a>
+                                                </div>
                                             </div>
-                                            <div class="mb-3 form-check">
-                                                <button type="button" class="btn "><ion-icon
-                                                        name="logo-facebook"></ion-icon> Facebook</button>
+                                            <div class="mb-3">
+                                                <button type="submit"
+                                                    class="btn login-btn w-100 d-inline-block text-center">Iniciar
+                                                    sesión</button>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div id="registro" class="container tab-pane fade"><br>
-                                        <div class="mb-3">
-                                            <label for="correo" class="form-label">Correo</label>
-                                            <input type="email" class="form-control" id="correo"
-                                                placeholder="Su correo electrónico">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Su contraseña">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
-                                            <input type="password" class="form-control" id="confirmPassword"
-                                                placeholder="Su contraseña">
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                                            <label class="form-check-label" for="rememberMe">Acepto los <a href="#"
-                                                    class="no-password">Términos y condiciones</a></label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <button type="submit"
-                                                class="btn login-btn w-100 d-inline-block text-center">Registrarse</button>
-                                        </div>
-                                        <div class="separator">
-                                            <span class="text-muted small">O regístrate con</span>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-content-center">
-                                            <div class="mb-3 form-check">
-                                                <button type="button" class="btn "><ion-icon
-                                                        name="logo-google"></ion-icon> Google</button>
+                                            <div class="separator">
+                                                <span class="text-muted small">O inicia sesión con</span>
                                             </div>
-                                            <div class="mb-3 form-check">
-                                                <button type="button" class="btn "><ion-icon
-                                                        name="logo-facebook"></ion-icon> Facebook</button>
+                                            <div class="d-flex justify-content-center align-content-center">
+                                                <div class="mb-3 form-check">
+                                                    <button type="button" class="btn "><ion-icon
+                                                            name="logo-google"></ion-icon> Google</button>
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                    <button type="button" class="btn "><ion-icon
+                                                            name="logo-facebook"></ion-icon> Facebook</button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
+                                    <form action="#">
+                                        <div id="registro" class="container tab-pane fade"><br>
+                                            <div class="mb-3">
+                                                <label for="correo-reg" class="form-label">Correo</label>
+                                                <input type="email" class="form-control" id="correo-reg"
+                                                    placeholder="Su correo electrónico">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password-reg" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="password-reg"
+                                                    placeholder="Su contraseña">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="confirmPassword-reg" class="form-label">Confirmar
+                                                    contraseña</label>
+                                                <input type="password" class="form-control" id="confirmPassword-reg"
+                                                    placeholder="Su contraseña">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="terminos">
+                                                <label class="form-check-label" for="terminos">Acepto los <a href="#"
+                                                        class="no-password">Términos y condiciones</a></label>
+                                            </div>
+                                            <div class="mb-3">
+                                                <button type="submit"
+                                                    class="btn login-btn w-100 d-inline-block text-center">Registrarse</button>
+                                            </div>
+                                            <div class="separator">
+                                                <span class="text-muted small">O regístrate con</span>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-content-center">
+                                                <div class="mb-3 form-check">
+                                                    <button type="button" class="btn "><ion-icon
+                                                            name="logo-google"></ion-icon> Google</button>
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                    <button type="button" class="btn "><ion-icon
+                                                            name="logo-facebook"></ion-icon> Facebook</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
 
@@ -518,7 +523,8 @@
                             threshold: .3
                         };
                     }
-
+                    // Crear un IntersectionObserver para observar las secciones
+                    // y resaltar el enlace de navegación correspondiente
                     const observer = new IntersectionObserver((entries) => {
                         entries.forEach(entry => {
 
