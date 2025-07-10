@@ -19,7 +19,7 @@
             <a class="navbar-brand" href="#">Pikavestimenta</a>
             <!-- Button trigger modal -->
             <button type="button" class="login-btn rounded-pill px-3 ms-auto" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+                data-bs-target="#authModal">
                 <ion-icon name="contact"></ion-icon> Iniciar sesión
             </button>
         </div>
@@ -41,13 +41,17 @@
     </section>
         <div class=" welcome-animation">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
-                alt="Pokébola 1" class="pokeball" title="Outfit 1" onclick="showCategory('todos')">
+                alt="Pokébola 1" data-bs-toggle="tooltip" data-bs-original-title="Outfit 1" class="pokeball" title=""
+                onclick="showCategory('todos')">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
-                alt="Pokébola 2" class="pokeball" title="Outfit 2" onclick="showCategory('buzos')">
+                alt="Pokébola 2" data-bs-toggle="tooltip" data-bs-original-title="Outfit 2" class="pokeball" title=""
+                onclick="showCategory('buzos')">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
-                alt="Pokébola 3" class="pokeball" title="Outfit 3" onclick="showCategory('camisetas')">
+                alt="Pokébola 3" data-bs-toggle="tooltip" data-bs-original-title="Outfit 3" class="pokeball" title=""
+                onclick="showCategory('camisetas')">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"
-                alt="Pokébola 4" class="pokeball" title="Outfit 4" onclick="showCategory('accesorios')">
+                alt="Pokébola 4" data-bs-toggle="tooltip" data-bs-original-title="Outfit 4" class="pokeball" title=""
+                onclick="showCategory('accesorios')">
             </div>
 
             <section id="ofertas" class="section">
@@ -357,30 +361,112 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5" id="authModalLabel">Acceso a tu cuenta</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque at modi necessitatibus,
-                            perspiciatis, in reiciendis recusandae maxime nam cupiditate praesentium fuga quia eligendi
-                            officiis voluptate eos rem autem? Atque deleniti consectetur aperiam accusantium est quam
-                            quo nesciunt amet at! Possimus ex rem, ea nihil repellat, eligendi eius similique
-                            repudiandae fugiat amet architecto reiciendis temporibus fuga a laudantium fugit
-                            necessitatibus tenetur eos? Impedit dignissimos eum excepturi ipsum amet reiciendis beatae.
-                            Molestiae libero officiis doloribus porro quam animi aliquam adipisci nostrum, voluptate
-                            delectus architecto nulla minima ab corporis hic exercitationem nihil quis iusto deleniti
-                            ipsum alias nemo accusamus? Atque quo architecto illo.
+                            <div class="container">
+                                <!-- Nav pills -->
+                                <ul class="nav nav-pills nav-fill" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="pill" href="#login">Iniciar
+                                            sesión</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="pill" href="#registro">Registrarse</a>
+                                    </li>
+
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div id="login" class="container tab-pane show active"><br>
+                                        <div class="mb-3">
+                                            <label for="correo" class="form-label">Correo</label>
+                                            <input type="email" class="form-control" id="correo"
+                                                placeholder="Su correo electrónico">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Su contraseña">
+                                        </div>
+                                        <div class="d-flex justify-content-between align-content-center">
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <a href="#" class="no-password">¿Olvidó su contraseña?</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <button type="submit"
+                                                class="btn login-btn w-100 d-inline-block text-center">Iniciar
+                                                sesión</button>
+                                        </div>
+                                        <div class="separator">
+                                            <span class="text-muted small">O inicia sesión con</span>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-content-center">
+                                            <div class="mb-3 form-check">
+                                                <button type="button" class="btn "><ion-icon
+                                                        name="logo-google"></ion-icon> Google</button>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <button type="button" class="btn "><ion-icon
+                                                        name="logo-facebook"></ion-icon> Facebook</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="registro" class="container tab-pane fade"><br>
+                                        <div class="mb-3">
+                                            <label for="correo" class="form-label">Correo</label>
+                                            <input type="email" class="form-control" id="correo"
+                                                placeholder="Su correo electrónico">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Su contraseña">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                                            <input type="password" class="form-control" id="confirmPassword"
+                                                placeholder="Su contraseña">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Acepto los <a href="#"
+                                                    class="no-password">Términos y condiciones</a></label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <button type="submit"
+                                                class="btn login-btn w-100 d-inline-block text-center">Registrarse</button>
+                                        </div>
+                                        <div class="separator">
+                                            <span class="text-muted small">O regístrate con</span>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-content-center">
+                                            <div class="mb-3 form-check">
+                                                <button type="button" class="btn "><ion-icon
+                                                        name="logo-google"></ion-icon> Google</button>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <button type="button" class="btn "><ion-icon
+                                                        name="logo-facebook"></ion-icon> Facebook</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -397,10 +483,26 @@
 
             <script>
                 $(document).ready(function () {
+                    // Inicializar tooltips de Bootstrap
+                    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl)
+                    })
+
+                    // Inicializar el modal de Bootstrap
+                    var myModal = document.getElementById('authModal')
+                    myModal.addEventListener('shown.bs.modal', function () {
+                        console.log('Modal is shown!');
+                        $('.nav-pills .nav-link').first().tab('show'); // Mostrar la primera pestaña por defecto
+                    })
+
+                    // Resaltar el enlace de navegación activo al hacer click
                     $('.nav-link').on('click', function () {
                         $('.nav-link').removeClass('active');
                         $(this).addClass('active');
                     });
+
+                    // Resaltar el enlace de navegación activo al hacer scroll
                     const sections = document.querySelectorAll('section');
                     let options = {};
                     if (window.innerHeight <= 768) {
@@ -435,6 +537,7 @@
                         observer.observe(section);
                     });
                 });
+                //filtrar productos por categoría
                 function showCategory(category) {
                     $('.card').each(function () {
                         if (category === 'todos' || $(this).data('category') === category) {
@@ -448,6 +551,7 @@
                         return $(this).text().toLowerCase() === category;
                     }).addClass('active');
                 }
+                // Función para añadir productos al carrito
                 function addToCart(productName, price, imageUrl) {
                     const cartCount = $('.cart-count');
                     let count = parseInt(cartCount.text());
