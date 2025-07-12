@@ -8,6 +8,7 @@
 	--color-rojo-pika: #e74c3c;
 	--color-blanco-pika: #f0f8ff;
 	--color-gris-pika-oscuro: #2c3e50;
+	--color-gris-pika: #d9dcdd;
 }
 
 html {
@@ -321,16 +322,26 @@ nav a:hover::after {
 }
 
 .price {
-	font-weight: bold;
-	color: var(--color-rojo-pika);
+	font-weight: 600;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
 }
 
-.price .original-price {
-	text-decoration: line-through;
+.cart-item-price {
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1rem;
+}
+.price.has-discount,
+.cart-item-price.has-discount {
+	color: var(--color-rojo-pika);
+}
+.price .list-price,
+.cart-item-price .list-price {
+	font-size: 0.7em;
 	color: var(--color-gris-pika-oscuro);
-	font-size: 0.9rem;
+	text-decoration: line-through;
+	margin-left: 0.255rem;
 }
 
 .buttons {
@@ -556,6 +567,7 @@ nav a:hover::after {
 .no-password:hover {
 	text-decoration: underline;
 }
+
 .separator {
 	display: flex;
 	justify-content: center;
@@ -563,6 +575,7 @@ nav a:hover::after {
 	position: relative;
 	margin: 1.5rem 0;
 }
+
 .separator span {
 	background-color: white;
 	padding: 0 .75rem;
@@ -571,7 +584,7 @@ nav a:hover::after {
 	z-index: 1;
 }
 
-.separator::before{
+.separator::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -581,4 +594,88 @@ nav a:hover::after {
 	height: 1px;
 	background-color: var(--color-azul-pika);
 	z-index: 0;
+}
+
+.cart-item {
+	display: grid;
+	grid-template-columns: 120px 1fr auto;
+	grid-template-rows: auto;
+
+}
+
+.cart-item-image {
+	width: 120px;
+	height: 120px;
+	background-size: cover;
+	background-position: center;
+	border-radius: .5rem;
+}
+
+.cart-item-title {
+	font-weight: 600;
+	color: var(--color-azul-pika);
+	margin-bottom: .5rem;
+}
+
+
+.cart-item-cont {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	border: 1px solid var(--color-azul-pika);
+	border-radius: .25rem;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.action {
+	display: inline-block;
+	padding: .125rem .25rem;
+	font-size: .8rem;
+	line-height: .75rem;
+	border: 1px solid transparent;
+	margin: 0;
+	transition: 0.3s ease;
+}
+
+.action.minus,
+.action.plus,
+.action.delete {
+	cursor: pointer;
+}
+
+.action.minus,
+.action.plus {
+	color: var(--color-azul-pika);
+	background-color: var(--color-gris-pika);
+}
+
+.action.minus:hover {
+	background-color: var(--color-azul-pika);
+	color: var(--color-blanco-pika);
+}
+
+.action.plus:hover {
+	background-color: var(--color-azul-pika);
+	color: var(--color-blanco-pika);
+}
+
+.action.count {
+	margin-left: .5rem;
+	margin-right: .5rem;
+	color: var(--color-gris-pika-oscuro);
+}
+
+.action.delete {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	color: var(--color-rojo-pika);
+	border: 1px solid var(--color-rojo-pika);
+	border-radius: .25rem;
+}
+
+.action.delete:hover {
+	background-color: var(--color-rojo-pika);
+	color: var(--color-blanco-pika);
 }
