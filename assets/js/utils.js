@@ -213,6 +213,25 @@ function updateCart() {
         const itemsCart = $('#cartItems');
         $(itemsCart).html('<p class="text-center text-danger">El carrito está vacío 😒</p> ');
     }
+    // Calcula el ahorro total
+    calculateSavings();
+}
 
+// calcular ahorro en la compra
+function calculateSavings() {
+    let totalAhorro = 0;
+    carrito.forEach(idProducto => {
+        const producto = productos(idProducto);
+        if (producto.descuento > 0) {
+            const ahorro = producto.precioLista - producto.precio;
+            totalAhorro += ahorro * parseInt($(`#cart-item-${idProducto} .count`).text());
+        }
+    });
+    $('#total-savings').text(`Ahorro total: $${totalAhorro.toFixed(2)}`);
+    if (totalAhorro > 0) {
+        $('#total-savings').removeClass('d-none');
+    } else {
+        $('#total-savings').addClass('d-none');
+    }
 }
 
