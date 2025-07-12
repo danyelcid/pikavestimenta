@@ -119,7 +119,10 @@ const carrito = [];
 
 // Función para añadir productos al carrito
 function addToCart(idProducto) {
-
+    // Verifica hay otros productos en el carrito
+    if (carrito.length === 0) {
+        $('#cartItems').html(''); // Limpia el carrito si está vacío
+    }
     const producto = productos(idProducto);
     // Verifica si el producto ya está en el carrito
     if (carrito.includes(idProducto)) {
